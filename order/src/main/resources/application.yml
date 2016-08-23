@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: order
+
+server:
+  port: ${port:8082}
+
+logging:
+  level:
+    com.epages: INFO
+    org.springframework: INFO

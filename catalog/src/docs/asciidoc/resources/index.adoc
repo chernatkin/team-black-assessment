@@ -1,0 +1,20 @@
+[resources-index]
+== Index
+
+=== Resource overview
+
+A `GET` request is used to retrieve the index resource, which links 
+to the relevant resources exposed by this service.
+
+==== Example request
+
+include::{snippets}/index-example/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/index-example/http-response.adoc[]
+
+[[links]]
+==== Links structure
+
+include::{snippets}/index-example/links.adoc[]

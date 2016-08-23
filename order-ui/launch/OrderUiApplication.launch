@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/order-ui/src/main/java/com/epages/microservice/handson/orderui/OrderUiApplication.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="CATALOG_API_BACKEND_HOST" value="http://localhost:8081"/>
+<mapEntry key="ORDER_API_BACKEND_HOST" value="http://localhost:8082"/>
+</mapAttribute>
+<listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+<listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
+<listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.epages.microservice.handson.orderui.OrderUiApplication"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="order-ui"/>
+</launchConfiguration>

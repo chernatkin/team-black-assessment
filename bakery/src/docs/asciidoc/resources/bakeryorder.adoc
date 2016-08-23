@@ -1,0 +1,41 @@
+[[resources-bakeryorders]]
+== Bakery Orders
+
+The Delivery Orders resources is used to retrieve bakery orders.
+
+
+[[resources-bakeryorders-list]]
+=== Listing bakery orders
+
+A `GET` request will list all of the service's bakery orders.
+
+==== Response structure
+
+include::{snippets}/bakeryorders-list/response-fields.adoc[]
+
+==== Example request
+
+include::{snippets}/bakeryorders-list/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/bakeryorders-list/http-response.adoc[]
+
+
+[[resources-bakeryorder-get]]
+=== Retrieving a bakery order
+
+A `GET` request is used to retrieve the details of a bakery order.
+
+==== Response structure
+
+include::{snippets}/bakeryorder-get/response-fields.adoc[]
+
+==== Example request
+
+include::{snippets}/bakeryorder-get/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/bakeryorder-get/http-response.adoc[]
+

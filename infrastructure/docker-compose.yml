@@ -1,0 +1,15 @@
+data:
+  image: busybox
+  command: /bin/true
+  volumes:
+    - /var/lib/rabbitmq
+
+rabbitmq:
+  image: rabbitmq:management
+  hostname: rabbitmq
+  restart: always
+  volumes_from:
+    - data
+  ports:
+    - "5672:5672"
+    - "15672:15672"

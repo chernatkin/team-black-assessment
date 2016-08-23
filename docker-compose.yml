@@ -1,0 +1,71 @@
+catalog:
+  build: catalog
+  volumes:
+    - "./catalog/build/libs:/app"
+  external_links:
+    - infrastructure_rabbitmq_1:rabbitmq
+  environment:
+    - PROFILE=prod
+    - RABBITMQ_HOST=rabbitmq
+    - RABBITMQ_PORT=5672
+    - PORT=8081
+  ports:
+   - "8081:8081"
+
+order:
+  build: order
+  volumes:
+    - "./order/build/libs:/app"
+  external_links:
+    - infrastructure_rabbitmq_1:rabbitmq
+  environment:
+    - PROFILE=prod
+    - RABBITMQ_HOST=rabbitmq
+    - RABBITMQ_PORT=5672
+    - PORT=8082
+  ports:
+   - "8082:8082"
+
+bakery:
+  build: bakery
+  volumes:
+    - "./bakery/build/libs:/app"
+  external_links:
+    - infrastructure_rabbitmq_1:rabbitmq
+  environment:
+    - PROFILE=prod
+    - RABBITMQ_HOST=rabbitmq
+    - RABBITMQ_PORT=5672
+    - PORT=8083
+  ports:
+    - "8083:8083"
+
+delivery:
+  build: delivery
+  volumes:
+    - "./delivery/build/libs:/app"
+  external_links:
+    - infrastructure_rabbitmq_1:rabbitmq
+  environment:
+    - PROFILE=prod
+    - RABBITMQ_HOST=rabbitmq
+    - RABBITMQ_PORT=5672
+    - PORT=8084
+  ports:
+    - "8084:8084"
+
+orderui:
+  build: order-ui
+  volumes:
+    - "./order-ui/build/libs:/app"
+  external_links:
+    - infrastructure_rabbitmq_1:rabbitmq
+  environment:
+    - PROFILE=prod
+    - RABBITMQ_HOST=rabbitmq
+    - RABBITMQ_PORT=5672
+    - PORT=8082
+    - CATALOG_API_BACKEND_HOST=http://172.17.42.1:8081
+    - ORDER_API_BACKEND_HOST=http://172.17.42.1:8082
+  ports:
+   - "8085:8085"

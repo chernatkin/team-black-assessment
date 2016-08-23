@@ -1,0 +1,41 @@
+[[resources-deliveryorders]]
+== Delivery Orders
+
+The Delivery Orders resources is used to retrieve delivery orders.
+
+
+[[resources-deliveryorders-list]]
+=== Listing delivery orders
+
+A `GET` request will list all of the service's delivery orders.
+
+==== Response structure
+
+include::{snippets}/deliveryorders-list/response-fields.adoc[]
+
+==== Example request
+
+include::{snippets}/deliveryorders-list/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/deliveryorders-list/http-response.adoc[]
+
+
+[[resources-deliveryorder-get]]
+=== Retrieving a delivery order
+
+A `GET` request is used to retrieve the details of a delivery order.
+
+==== Response structure
+
+include::{snippets}/deliveryorder-get/response-fields.adoc[]
+
+==== Example request
+
+include::{snippets}/deliveryorder-get/curl-request.adoc[]
+
+==== Example response
+
+include::{snippets}/deliveryorder-get/http-response.adoc[]
+

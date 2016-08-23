@@ -1,0 +1,39 @@
+spring:
+  main:
+    show-banner: true
+
+  profiles:
+    active: ${profile:default}
+
+  rabbitmq:
+    host: ${rabbitmq.host:rabbitmq}
+    port: ${rabbitmq.port:5672}
+
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    org.springframework.boot: INFO
+    org.springframework.core: INFO
+    org.springframework.context.support.PostProcessorRegistrationDelegate: WARN
+    org.springframework.orm.jpa: INFO
+    org.springframework.orm.jpa.persistenceunit: INFO
+    org.springframework.data.jpa: INFO
+    org.springframework.data.rest.webmvc: WARN
+    #org.hibernate.SQL: TRACE
+    #org.hibernate.type: INFO
+    #org.hibernate.type.EnumType: TRACE
+    #org.hibernate.type.descriptor.sql: TRACE
+    #org.hibernate.type.BasicTypeRegistry: INFO
+    #org.hibernate.type.descriptor: INFO

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: catalog
+
+server:
+  port: ${port:8081}
+
+logging:
+  level:
+    com.epages: INFO
+    org.springframework: INFO
