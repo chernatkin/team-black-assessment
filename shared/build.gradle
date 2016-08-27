@@ -54,6 +54,7 @@ dependencies {
 	compile ("org.springframework.boot:spring-boot-starter-jetty")
     compile("com.h2database:h2")
     compile("org.atteo:evo-inflector:1.2.1")
+    compile("org.hibernate:hibernate-envers:4.3.10.Final")
 
     compile ("com.google.guava:guava:18.0")
     compile("org.javamoney:moneta:1.0")
