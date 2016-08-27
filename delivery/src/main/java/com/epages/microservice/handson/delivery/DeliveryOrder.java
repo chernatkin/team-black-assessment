@@ -15,6 +15,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.epages.microservice.handson.shared.jpa.Audited;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -33,6 +34,7 @@ public class DeliveryOrder implements Serializable {
     @Column(name = "ORDER_LINK", length = 255, unique = true, nullable = false)
     private URI orderLink;
 
+    @Audited
     @Enumerated(EnumType.STRING)
     @Column(name = "DELIVERY_ORDER_STATE", length = 30, nullable = false)
     private DeliveryOrderState deliveryOrderState;
